@@ -1,0 +1,5 @@
+server.port=8091
+#hibernate is default orm
+#swagger adding
+spring.mvc.pathmatch.matching-strategy=ANT_PATH_MATCHER
+management.endpoints.web.exposure.include=health,info,beans

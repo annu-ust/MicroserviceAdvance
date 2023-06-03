@@ -1,0 +1,31 @@
+package com.ust.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+@Configuration
+public class AppConfig {
+	//created on 31/05/2023 after the creation on envdetailas class
+	@Autowired
+	private EnvDetails envDetails;
+	@Bean
+    @Profile("dev")
+	public EnvDetails devEnv() {
+		System.out.println("Dev environment");
+		System.out.println("envDetails");
+		return envDetails;
+		
+	}
+	@Bean
+    @Profile("test")
+	public EnvDetails testEnv() {
+		System.out.println("test environment");
+		System.out.println("envDetails");
+		return envDetails;
+		
+	}
+
+
+}

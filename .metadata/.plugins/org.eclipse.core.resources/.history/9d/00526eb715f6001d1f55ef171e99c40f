@@ -1,0 +1,15 @@
+spring:
+ application:
+   name: helloservice
+server:
+     port: 8094
+eureka:
+  client:
+    register-with-eureka: true
+ #service must needed to resiter in registry service so register eureka=true
+    fetch-registry: true
+#we want to fetch the service from registry therefore fetch =true
+    service-url:
+         defaultZone: http://localhost:8761/eureka
+  instance: 
+    hostname: localhost   
